@@ -15,7 +15,7 @@ import java.util.List;
 public class Exercice {
     
     public static List<List<Integer>> partition(List<Integer> list, int nb) {
-        if( nb == 0 ) {
+        if( nb == 0 || list.isEmpty() ) {
             return null;
         }
         List<List<Integer>> result = new ArrayList<>();

@@ -118,11 +118,8 @@ public class ExerciceTest {
         result = partition(list, -2);
         Assert.assertArrayEquals(result.toArray(), expected.toArray());
         
-        expected = new ArrayList<>();
-        listTest = new ArrayList<>();
-        expected.add(listTest);
         result = partition(new ArrayList<Integer>(), 5);
-        Assert.assertArrayEquals(result.toArray(), expected.toArray());
+        Assert.assertNull(result);
         
     }
     
