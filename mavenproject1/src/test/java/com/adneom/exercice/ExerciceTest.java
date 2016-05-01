@@ -63,7 +63,6 @@ public class ExerciceTest {
         listTest.add(4);
         listTest.add(5);
         expected.add(listTest);
-        
         result = partition(list, 2);
         
         Assert.assertArrayEquals(result.toArray(), expected.toArray());
@@ -91,6 +90,40 @@ public class ExerciceTest {
         result = partition(list, 2);
         
         Assert.assertArrayEquals(result.toArray(), expected.toArray());
+        
+        expected = new ArrayList<>();
+        expected.add(list);
+        
+        result = partition(list, list.size());
+        Assert.assertArrayEquals(result.toArray(), expected.toArray());
+        
+        result = partition(list, 0);
+        Assert.assertNull(result);
+        
+        expected = new ArrayList<>();
+        listTest = new ArrayList<>();
+        listTest.add(0);
+        listTest.add(1);
+        expected.add(listTest);
+        
+        listTest = new ArrayList<>();
+        listTest.add(2);
+        listTest.add(3);
+        expected.add(listTest);
+        
+        listTest = new ArrayList<>();
+        listTest.add(4);
+        expected.add(listTest);
+        
+        result = partition(list, -2);
+        Assert.assertArrayEquals(result.toArray(), expected.toArray());
+        
+        expected = new ArrayList<>();
+        listTest = new ArrayList<>();
+        expected.add(listTest);
+        result = partition(new ArrayList<Integer>(), 5);
+        Assert.assertArrayEquals(result.toArray(), expected.toArray());
+        
     }
     
 }

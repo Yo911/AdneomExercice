@@ -15,6 +15,9 @@ import java.util.List;
 public class Exercice {
     
     public static List<List<Integer>> partition(List<Integer> list, int nb) {
+        if( nb == 0 ) {
+            return null;
+        }
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> subList = new ArrayList<>();
         for( int i = 0; i < list.size(); i ++) {
